@@ -13,10 +13,18 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var subPresentText: UILabel!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var presentTextPage = ""
+    var infoTextPage    = ""
+    var currentPage  = 0 // Номер текущей страницы
+    var numberOfPage = 0 // Общее количество страниц
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        presentText.text = presentTextPage
+        subPresentText.text = infoTextPage
+        pageControl.numberOfPages = numberOfPage
+        pageControl.currentPage = currentPage
     }
     
 
